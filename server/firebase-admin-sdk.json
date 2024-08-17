@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mindfulness-42398",
+  "private_key_id": "9a80a047b2269592a34c69d47f9cdc40a9a2a502",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC18RDzmSvUSs71\nupRrlEIdTLymmasrEB/HeLxLzATk92ZBPWzQnsGG7LCCSgWWoDC/A6McVcKs+BoI\n+rXEu0IKUOuQS/vsPlO006X4r2/dBW7ee1UZwLQW3/0vT1Inqx6cbu/DkhNvpSDv\nmRUk+2kA8dcmp8wGS4vLH+CJPenF9ZuwkU6gAhBipx3BYtbNigxTDH05URERxEx+\nNLxuq8itrWlI8W1cQNd5IG/UeWLqwZg6rfeT3c9gAh73sekmeBZi/Z/u+7PxuQGy\nBiZiofgtv2p4RMD/IqDJpGpjxJ3FE1H70PgXgN9OK7FZ0XaNULNGVTDZGAXmmAfA\nOatHiEeNAgMBAAECggEABMKrtZ/4mluhuiK5Xu44Y6FeH0LOjHglyLeTP611JFOH\n0KWtivDYcfIP9TzAFC6ZT+olsqhYyWNNdRYwOtdGdVQkMbiXPRltYcIW6eCXPfJ2\nMeqKsbuNyrpuGraJ2QFcce3iJp0UFpv8tmAsQjU0zGJHhZqm1zRTUkuBeb3Nt9D3\no/kUI7DEtaRWaAxUDX4PoAduLmkylSNetLEs1iH9YVPKjl+W6c3jMT+RarZzlqol\nVZh3q6IKinGibYyjUwuH0V9f6S0/69DFtnvEyDDMEifXpERK7AV8iCkMm/F4gbW2\njFIVYRcJQ7jRhww9MT/mZ23LF1Q+3g8moGNZaOdLiQKBgQD87JGni+WABR139fRe\nxXqL7W+gTCSb6kpeQ8Weqofa9jrtzB6eexWo2Jn1IPQwMGwaw8AJ9TdU/Zu/NzwH\nd0mfM+9E4991w/QCzYam4fH5GIJqVKGp3yGXmHF795AANmy0fxaIFTM6ovyE1NOW\nPEFsGynh1Brg6DACxfdHK0Qz+QKBgQC4J4HILnAu0NwDROIxcVUXgVXq3yiAmYF+\nP9OMfttoWccS/sxrnZsm/irwJyFGtz0LJRJj/nb6G09we4O/UdIJUZaxQJucyI6v\np41OKt6chPWrNmujHWe0QorJjGdO0MrHu2lhBDgqsfb3F7Tyt/u8KkgB2qa/zWXw\nXozrG6ztNQKBgQC0cYKo6iHd58hSYWLqijEXy1msHyavJcPQ5MEEpd0u1iTMqqfd\noSqev4l3XP9ZsfIuViGX+R50wEpxbVKicPRRZJf7qicuuZJIvaCnRuN/N4EzoxWD\nP/GTWer86m4N+MYtL84/YACggM9vZPdfY7W5DtgeiVhzxLMcB2iXmcKa4QKBgCbc\nf3DFC/t1K9iswqb4aaKKMp1b9moc+syvn274nkiJGY+SoYTcP4+c92ayez03EfS2\nIAll+6mP9dWg2w6Wr6Izy38gSTZuxF2hGBq0xUF2dXlqBJDpdab+m9cof+yL9x7r\nF7PXdhrcb2d5Y0ANP1xX99YcVDAJokd1THuY3Yc5AoGBAINewBnTIJ30+5XeVmhE\nrpIw1ZOAepg8WrHo3pBLT49R5W77WChcroBaz8xqchQ+CCKMv1g7/RV77ekTGfuS\nEm0IrDbx/Gtg2ajRxIt6ClpYSZ5nkXN0NlMje+rHsv2ZHVSmtXcEnln4ZBRAUMG8\nhRU0H8RNuWSkimOANA+1NTAt\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-4w7b0@mindfulness-42398.iam.gserviceaccount.com",
+  "client_id": "109013728358113139415",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-4w7b0%40mindfulness-42398.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

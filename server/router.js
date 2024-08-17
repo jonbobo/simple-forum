@@ -1,10 +1,12 @@
+// router.js
 const express = require('express');
 const router = express.Router();
 
 module.exports = (db, upload) => {
+    // GET all threads
     router.get('/threads', async (req, res) => {
         try {
-            const [threads] = await db.execute('SELECT id, title, created_at, image FROM threads ORDER BY created_at DESC');
+            const [threads] = await db.query('SELECT id, title, created_at, image FROM threads ORDER BY created_at DESC');
             res.json(threads);
         } catch (error) {
             console.error('Error fetching threads:', error);
@@ -12,18 +14,18 @@ module.exports = (db, upload) => {
         }
     });
 
+    // GET a specific thread with its comments
     router.get('/threads/:threadId', async (req, res) => {
         const threadId = req.params.threadId;
         try {
-            const [threads] = await db.execute('SELECT * FROM threads WHERE id = ?', [threadId]);
+            const [threads] = await db.query('SELECT * FROM threads WHERE id = ?', [threadId]);
 
             if (threads.length === 0) {
-                res.status(404).json({ error: 'Thread not found' });
-                return;
+                return res.status(404).json({ error: 'Thread not found' });
             }
 
             const thread = threads[0];
-            const [comments] = await db.execute('SELECT * FROM comments WHERE thread_id = ? ORDER BY created_at ASC', [threadId]);
+            const [comments] = await db.query('SELECT * FROM comments WHERE thread_id = ? ORDER BY created_at ASC', [threadId]);
 
             thread.comments = comments;
             res.json(thread);
@@ -33,16 +35,13 @@ module.exports = (db, upload) => {
         }
     });
 
+    // POST a new thread
     router.post('/threads', upload.single('image'), async (req, res) => {
-        console.log('Received thread creation request:', req.body);
         const { title, content } = req.body;
         const imagePath = req.file ? `/uploads/${req.file.filename}` : null;
 
-        console.log('Image path:', imagePath);
-
         try {
-            const [result] = await db.execute('INSERT INTO threads (title, content, image) VALUES (?, ?, ?)', [title, content, imagePath]);
-            console.log('Thread created successfully:', result);
+            const [result] = await db.query('INSERT INTO threads (title, content, image) VALUES (?, ?, ?)', [title, content, imagePath]);
             res.status(201).json({ id: result.insertId, title, content, image: imagePath });
         } catch (error) {
             console.error('Error creating thread:', error);
@@ -50,11 +49,12 @@ module.exports = (db, upload) => {
         }
     });
 
+    // POST a new comment
     router.post('/threads/:threadId/comments', async (req, res) => {
         const { threadId } = req.params;
         const { content } = req.body;
         try {
-            const [result] = await db.execute('INSERT INTO comments (thread_id, content) VALUES (?, ?)', [threadId, content]);
+            const [result] = await db.query('INSERT INTO comments (thread_id, content) VALUES (?, ?)', [threadId, content]);
             res.status(201).json({ id: result.insertId, thread_id: threadId, content });
         } catch (error) {
             console.error('Error creating comment:', error);
